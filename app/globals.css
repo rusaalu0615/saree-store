@@ -25,3 +25,13 @@ body {
 .nav-item:hover .nav-arrow {
   transform: rotate(180deg);
 }
+
+/* Force smaller logo on mobile to ensure it fits */
+@media (max-width: 767px) {
+  .navbar-logo {
+    width: 56px !important;
+    height: 36px !important;
+    object-fit: contain;
+  }
+}
+
