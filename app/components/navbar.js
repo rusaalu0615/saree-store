@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
 
 
-        <nav className="absolute top-2 fixed left-0 right-0 flex bg-black-300 justify-between items-center" style={{paddingLeft: '48px', paddingRight: '48px'}}>
+        <nav className="fixed top-5 left-5 right-5 rounded-full flex bg-black-300 justify-between items-center backdrop-blur-md bg-black/10 z-50" style={{paddingLeft: '48px', paddingRight: '48px', zIndex: 9999}}>
             
             <div className="flex items-center cursor-pointer">
                 <img src="/logo.png" alt="Logo" className="h-15 w-24" style={{width: '100px', height: '60px'}}/>

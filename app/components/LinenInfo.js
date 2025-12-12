@@ -23,7 +23,7 @@ export default function LinenInfo() {
 
       {/* TEXT BLOCK FIXED LEFT + TOP */}
       <div
-        className="absolute flex flex-col max-w-[600px] z-10"
+        className="absolute flex flex-col max-w-[600px] z-[-10]"
         style={{
           top: "120px",
           left: "40px",
