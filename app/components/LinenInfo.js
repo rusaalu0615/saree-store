@@ -12,11 +12,11 @@ export default function LinenInfo() {
           src="/linen-info.jpg"
           alt="Linen Saree"
           className="w-full h-full object-cover"
-          animate={{ scale: [1, 1.04, 1] }}
+          animate={{ scale: [1, 1.2, 1] }}
           transition={{
-            duration: 12,
+            duration: 30,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "linear"
           }}
         />
       </div>
