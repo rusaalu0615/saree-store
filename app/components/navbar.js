@@ -15,14 +15,16 @@ export default function Navbar() {
                 <img src="/logo.png" alt="Logo" className="h-15 w-24" style={{width: 'clamp(60px, 15vw, 100px)', height: 'clamp(36px, 9vw, 60px)', objectFit: 'contain'}}/>
             </div>
 
-            <ul className="hidden md:flex gap-8 text-white cursor-pointer" style={{paddingLeft: '20px', paddingRight: '20px', paddingTop: '20px', paddingBottom: '20px', fontSize: '16px'}}>
-                 <li className="nav-item">Linen Sarees <ChevronUp className="nav-arrow inline-block" style={{width: '18px', height: '18px'}}/></li>
-                 <li className="nav-item">Bhagalpuri Sarees <ChevronUp className="nav-arrow inline-block" style={{width: '18px', height: '18px'}}/></li>
-                 <li className="nav-item">Silk Sarees <ChevronUp className="nav-arrow inline-block" style={{width: '18px', height: '18px'}}/></li>
-                 <li className="nav-item">Unstitched Suit Set <ArrowUpRight className="nav-arrow inline-block" style={{width: '18px', height: '18px'}}/></li>
-            </ul>
+            <div className="hidden md:flex flex-1 justify-center">
+                <ul className="flex gap-8 text-white cursor-pointer" style={{fontSize: '16px'}}>
+                    <li className="nav-item">Linen Sarees <ChevronUp className="nav-arrow inline-block" style={{width: '18px', height: '18px'}}/></li>
+                    <li className="nav-item">Bhagalpuri Sarees <ChevronUp className="nav-arrow inline-block" style={{width: '18px', height: '18px'}}/></li>
+                    <li className="nav-item">Silk Sarees <ChevronUp className="nav-arrow inline-block" style={{width: '18px', height: '18px'}}/></li>
+                    <li className="nav-item">Unstitched Suit Set <ArrowUpRight className="nav-arrow inline-block" style={{width: '18px', height: '18px'}}/></li>
+                </ul>
+            </div>
 
-            <ul className="hidden md:flex gap-8 items-center text-white cursor-pointer" style={{paddingLeft: '20px', paddingRight: '20px', paddingTop: '20px', paddingBottom: '20px', fontSize: '16px'}}>
+            <ul className="hidden md:flex gap-8 items-center text-white cursor-pointer" style={{fontSize: '16px'}}>
                 <li><SearchIcon className="h-6 w-6"/></li>
                 <li><ShoppingCartIcon className="h-6 w-6"/></li>
                 <li><User className="h-6 w-6"/></li>
