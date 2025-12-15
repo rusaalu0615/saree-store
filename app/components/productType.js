@@ -69,9 +69,9 @@ export default function ProductType() {
                                 transition={{ duration: 0.3 }}
                                 className="absolute z-20 inline-block left-1/2 bottom-2 transform -translate-x-1/2"
                             >
-                                <span className="text-lg flex px-2 py-1">
+                                <span className="text-lg flex items-center justify-center px-2 py-1">
                                     {product.title}
-                                    <ArrowUpRight />
+                                    <ArrowUpRight className="w-[18px] h-[18px] " />
                                 </span>
                             </motion.h3>
 
@@ -97,16 +97,6 @@ export default function ProductType() {
                         </motion.p>
                     </motion.div>
                 ))}
-            </div>
-
-            {/* MIDDLE TEXT */}
-            <div className="text-center">
-                <p
-                    className="text-gray-300 tracking-[25px] text-2xl font-bold"
-                    style={{ padding: "16px" }}
-                >
-                    FOR THE PEOPLE OF DIFFERENT LIKES
-                </p>
             </div>
 
             {/* SECOND ROW */}
@@ -142,9 +132,9 @@ export default function ProductType() {
                                 transition={{ duration: 0.3 }}
                                 className="absolute z-20 inline-block left-1/2 bottom-2 transform -translate-x-1/2"
                             >
-                                <span className="text-lg flex px-2 py-1">
+                                <span className="text-lg flex items-center justify-center py-1">
                                     {product.title}
-                                    <ArrowUpRight />
+                                    <ArrowUpRight className="h-[18px] w-[18px]"/>
                                 </span>
                             </motion.h3>
 
