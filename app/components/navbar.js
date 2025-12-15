@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
 
 
-        <nav className=" fixed top-5 left-0 right-0 md:left-5 md:right-5 h-14 md:h-14 lg:h-16 md:rounded-full flex bg-black-300 justify-between items-center backdrop-blur-md bg-black/10 z-50" style={{paddingLeft: 'max(16px, 4vw)', paddingRight: 'max(16px, 4vw)', zIndex: 9999}}>
+        <nav className=" fixed top-5 left-0 right-0 md:left-5 md:right-5 h-14 md:h-[60px] lg:h-[60px] md:rounded-full flex bg-black-300 justify-between items-center backdrop-blur-md bg-black/10 z-50" style={{paddingLeft: 'max(16px, 4vw)', paddingRight: 'max(16px, 4vw)', zIndex: 9999}}>
             
             <div className="flex items-center cursor-pointer">
                 <img src="/logo.png" alt="Logo" className="h-15 w-24" style={{width: 'clamp(60px, 15vw, 100px)', height: 'clamp(36px, 9vw, 60px)', objectFit: 'contain'}}/>

@@ -3,6 +3,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function LinenInfo() {
+
+
+
   return (
     <div className="w-full h-screen relative">
 
@@ -20,6 +23,7 @@ export default function LinenInfo() {
           }}
         />
       </div>
+      <button className='z-9999'>Hemlo</button>
 
       {/* TEXT BLOCK FIXED LEFT + TOP */}
       <div
@@ -30,7 +34,7 @@ export default function LinenInfo() {
           gap: "8px"
         }}
       >
-        <p className="text-xl font-bold text-[#9b9999]">Up To 60% OFF</p>
+        <p className="text-xl w-fit font-bold text-[#9b9999] bg-white">Up To 60% OFF</p>
 
         <h2 className="text-3xl text-[#9b9999]">Linen Designer Sarees</h2>
 
