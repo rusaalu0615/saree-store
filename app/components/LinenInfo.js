@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const DATA = {
   linen: {
@@ -8,12 +9,14 @@ const DATA = {
     title: "Linen Designer Sarees",
     description:
       "Discover the timeless elegance of our exquisite linen saree collection. Crafted with premium quality linen fabric, each saree is a perfect blend of comfort and style.",
+    shopNow: " Shop Now  "
   },
   cotton: {
     image: "/cotton.jpg",
     title: "Cotton Designer Sarees",
     description:
       "Explore breathable and graceful cotton sarees designed for everyday elegance. Soft textures and classic designs for effortless comfort.",
+    shopNow: " Shop Now  "
   },
 };
 
@@ -84,22 +87,37 @@ export default function LinenInfo() {
 
       {/* TOGGLE */}
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-50">
-        <div className="bg-black/10 backdrop-blur-md rounded-full flex shadow-lg p-2 w-[150px]">
+        <div className="relative bg-black/10 backdrop-blur-md rounded-full flex shadow-lg w-[180px] h-[48px] cursor-pointer">
+
+          {/* SLIDING PILL */}
+          <motion.div
+            layout
+            layoutId="toggle-pill"
+            className="absolute inset-0 w-1/2 bg-white rounded-full shadow cursor-pointer"
+            animate={{
+              x: active === "linen" ? "0%" : "100%",
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+            }}
+          />
+
+          {/* BUTTONS */}
           {ORDER.map((item) => (
             <button
               key={item}
               onClick={() => handleToggle(item)}
-              className={`h-[44px] flex-1 rounded-full cursor-pointer text-sm font-medium transition-all duration-300 ease-out flex items-center justify-center ${
-                active === item
-                  ? "bg-white text-black shadow"
-                  : "text-gray-300 hover:bg-white/10"
-              }`}
+              className={`relative z-10 w-1/2 h-full cursor-pointer rounded-full text-sm font-medium flex items-center justify-center transition-colors duration-300 ${active === item ? "text-black" : "text-gray-300"
+                }`}
             >
               {item.toUpperCase()}
             </button>
           ))}
         </div>
       </div>
+
 
       {/* TEXT */}
       {showText && (
@@ -146,6 +164,17 @@ export default function LinenInfo() {
             >
               {DATA[active].description}
             </motion.p>
+            <motion.div
+              className="inline-flex items-center gap-2 text-lg text-white font-medium cursor-pointer w-fit"
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.1 }}
+              whileHover={{ x: 6 }}
+            >
+              <span>{DATA[active].shopNow}</span>
+              <ArrowRight size={18} />
+            </motion.div>
+
 
           </motion.div>
         </div>

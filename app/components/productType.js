@@ -26,7 +26,7 @@ export default function ProductType() {
     }
 
   return (
-    <div className="w-full" style={{marginTop:120,}}>
+    <div className="w-full" style={{marginTop:100,}}>
       <h2 className="text-3xl font-bold text-white text-center">
         Explore Our Saree Collections
       </h2>
