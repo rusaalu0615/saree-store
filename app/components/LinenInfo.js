@@ -36,7 +36,7 @@ export default function LinenInfo() {
   };
 
   return (
-    <div className="w-full h-screen relative overflow-hidden mt-[120px]">
+    <div className="w-full h-screen relative overflow-hidden mt-[120px]" style={{marginTop:120}}>
       {/* IMAGE */}
       <AnimatePresence initial={false}>
         <motion.img
