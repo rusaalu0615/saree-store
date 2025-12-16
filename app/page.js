@@ -1,5 +1,6 @@
 import LandingPage from "./components/LandingPage";
 import LinenInfo from "./components/LinenInfo";
+import LinenSarees from "./components/linenSarees";
 import ProductType from "./components/productType";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <LandingPage />
     <ProductType />
     <LinenInfo />
+    <LinenSarees/>
     </>
   );
 }
