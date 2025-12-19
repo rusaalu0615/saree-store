@@ -27,7 +27,7 @@ export default function Navbar() {
           bg-white
           rounded-full
           h-[60px]
-          border border-[#dfdfdf]
+          border-[0.5px] border-[#dfdfdf]
           flex items-center
         "
         style={{paddingLeft:20, paddingRight:20}}

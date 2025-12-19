@@ -16,8 +16,8 @@ export default function ProductType() {
   ];
 
   const imageVariants = {
-    initial: { opacity:1, y: 0},
-    hover: { opacity:1, y: -40, transition: { duration: 0.3 } },
+      initial: { opacity: 1, y: 0, scale: 1 },
+      hover: { opacity: 1, y: -50, scale: 1.04 },
   }
 
     const descriptionContainer = {
@@ -48,15 +48,17 @@ export default function ProductType() {
         {products.map((product) => (
           <motion.div
             key={product.id}
-            className="relative group bg-white overflow-hidden cursor-pointer border border-gray-500 rounded-[20px]"
+            className="relative group bg-white overflow-hidden cursor-pointer border border-gray-200 rounded-[20px] h-[440px]"
             initial="initial"
             whileHover="hover"
           >
             <motion.img
               src={product.imageUrl}
               alt={product.title}
-              className="w-full h-[440px] object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
               variants={imageVariants}
+              transition={{ type: 'spring', stiffness: 160, damping: 22 }}
+              style={{ willChange: 'transform' }}
             />
 
             <motion.div
@@ -69,9 +71,6 @@ export default function ProductType() {
               <motion.p className="text-xs text-white text-center px-2" variants={descriptionChild}>
                 lorem ipsum dolor lorem lroem lorem lorem lorem lorem lorem lorem lorem lorem sit amet lorem lorem lorem
               </motion.p>
-
-
-
             </motion.div>
 
             <span className="absolute flex justify-center items-center bottom-0 left-0 right-0 font-sm text-white group-hover:text-black text-center" style={{padding:8}}>
