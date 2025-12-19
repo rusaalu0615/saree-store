@@ -34,9 +34,9 @@ export default function LinenSarees() {
             {/* OVERLAY CONTENT */}
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="flex flex-col items-center text-center text-white gap-6">
-                    <h2 className="text-6xl font-semibold">Linen Sarees</h2>
+                    <h2 className="text-6xl font-semibold font-modeline">Linen Sarees</h2>
 
-                    <p className="text-2xl opacity-90">
+                    <p className="text-2xl opacity-90 font-modeline">
                         Design For Modern Living. <br></br>Linen Sarees Redefined
                     </p>
 

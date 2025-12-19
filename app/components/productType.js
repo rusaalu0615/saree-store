@@ -20,23 +20,35 @@ export default function ProductType() {
     hover: { opacity:1, y: -40, transition: { duration: 0.3 } },
   }
 
-    const descriptionVariant = {
-    initial: { opacity: 0, y: 0 },
-      hover: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-    }
+    const descriptionContainer = {
+      initial: { opacity: 0 },
+      hover: {
+        opacity: 1,
+        transition: { staggerChildren: 0.06, delayChildren: 0 },
+      },
+    };
+
+    const descriptionChild = {
+      initial: { opacity: 0, y: 38 },
+      hover: {
+        opacity: 1,
+        y: 0,
+        transition: { type: "spring", stiffness: 120, damping: 18 },
+      },
+    };
 
   return (
-    <div className="w-full" style={{marginTop:110,}}>
-      <h2 className="text-3xl font-bold text-white text-center h-10">
-        Explore Our Saree Collections
+    <div className="w-full bg-[ #f5f5f5]" style={{marginTop:110,}}>
+      <h2 className="text-4xl tracking-wide font-bold text-black text-center h-10 font-modeline">
+        CRAFTED WITH LOVE FOR THE PEOPLE OF DIFFERENT LIKES
       </h2>
 
       {/* ✅ Grid Container */}
-      <div className="max-w- 95vw grid grid-cols-4 gap-[20px]" style={{marginTop:30, marginLeft:40, marginRight:40}}>
+      <div className=" grid grid-cols-4 gap-[20px]" style={{marginTop:30, marginLeft:40, marginRight:40}}>
         {products.map((product) => (
           <motion.div
             key={product.id}
-            className="relative group bg-white overflow-hidden cursor-pointer"
+            className="relative group bg-white overflow-hidden cursor-pointer border border-gray-500 rounded-[20px]"
             initial="initial"
             whileHover="hover"
           >
@@ -48,13 +60,15 @@ export default function ProductType() {
             />
 
             <motion.div
-              className="absolute bottom-12 left-5 right-5 p-4 opacity-0"
-              variants={descriptionVariant}
+              className="absolute bottom-12 left-5 right-5 p-4"
+              variants={descriptionContainer}
             >
-              <p className="text-lg text-white text-center">{product.description}</p>
-              <p className="text-xs text-white text-center px-2">
-  lorem ipsum dolor lorem lroem lorem lorem lorem lorem lorem lorem lorem lorem sit amet lorem lorem lorem lorem
-</p>
+              <motion.p className="text-lg text-white text-center" variants={descriptionChild}>
+                {product.description}
+              </motion.p>
+              <motion.p className="text-xs text-white text-center px-2" variants={descriptionChild}>
+                lorem ipsum dolor lorem lroem lorem lorem lorem lorem lorem lorem lorem lorem sit amet lorem lorem lorem
+              </motion.p>
 
 
 

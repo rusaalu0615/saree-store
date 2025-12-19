@@ -1,14 +1,29 @@
 @import "tailwindcss";
 
+/* Modeline font-face */
+@font-face {
+  font-family: 'Modeline';
+  src: url('/modeline/Modeline.ttf') format('truetype'),
+       url('/modeline/Modeline.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* keep default system font for most UI */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #202020;
+}
+
+/* Utility class to apply Modeline only to specific headings */
+.font-modeline {
+  font-family: 'Modeline', Arial, Helvetica, sans-serif;
 }
 
 /* Navbar arrow hover: rotate arrow on hover with a smooth transition */
