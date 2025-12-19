@@ -26,13 +26,13 @@ export default function ProductType() {
     }
 
   return (
-    <div className="w-full" style={{marginTop:100,}}>
-      <h2 className="text-3xl font-bold text-white text-center">
+    <div className="w-full" style={{marginTop:110,}}>
+      <h2 className="text-3xl font-bold text-white text-center h-10">
         Explore Our Saree Collections
       </h2>
 
       {/* ✅ Grid Container */}
-      <div className="grid grid-cols-4 gap-[20px]" style={{marginTop:20, marginLeft:40, marginRight:40}}>
+      <div className="max-w- 95vw grid grid-cols-4 gap-[20px]" style={{marginTop:30, marginLeft:40, marginRight:40}}>
         {products.map((product) => (
           <motion.div
             key={product.id}
@@ -43,7 +43,7 @@ export default function ProductType() {
             <motion.img
               src={product.imageUrl}
               alt={product.title}
-              className="w-full h-70 object-cover"
+              className="w-full h-[440px] object-cover"
               variants={imageVariants}
             />
 
