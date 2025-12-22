@@ -19,6 +19,7 @@
 /* keep default system font for most UI */
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
 }
 
 /* Utility class to apply Modeline only to specific headings */

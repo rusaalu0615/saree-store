@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function LinenSarees() {
     return (
-        <div className="relative w-full h-screen overflow-hidden">
+        <div className="relative w-full h-screen overflow-hidden " style={{marginTop:20}}>
 
             {/* IMAGE */}
             <motion.img
