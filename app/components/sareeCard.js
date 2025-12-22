@@ -25,7 +25,7 @@ export default function LinenSarees({ images = [], title }) {
         />
       )}
       </div>
-      <div className="absolute z-[9999] bg-white h-[176px] border-[0.5px] border-[#dfdfdf] bottom-5 left-5 right-5 pb-5 px-5 rounded-[36px]">
+      <div className="hover:shadow-[0_-20px_24px_rgba(0,0,0,0.1)] absolute z-[9999] bg-white h-[176px] border-[0.5px] border-[#dfdfdf] bottom-5 left-5 right-5 pb-5 px-5 rounded-[36px]">
 
       </div>
     </div>
