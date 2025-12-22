@@ -26,7 +26,7 @@ export default function LinenArrivals() {
   ];
 
   return (
-    <div className="" style={{ marginTop: 100 }}>
+    <div className="h-screen" style={{ marginTop: 100 }}>
       {/* Header */}
       <div
         className="flex justify-between items-center"

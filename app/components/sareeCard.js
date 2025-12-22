@@ -2,10 +2,11 @@ import Image from "next/image";
 
 export default function LinenSarees({ images = [], title }) {
   return (
-    <div className="w-[325px] h-[580px] border-[0.5px] border-#dfdfdf group relative overflow-hidden rounded-[46px] " style={{
+    <div className="w-[325px] h-[580px] border-[0.5px] border-[#dfdfdf] group relative overflow-hidden rounded-[46px] " style={{
         marginTop:20
     }}>
-      {images[0] && (
+      <div>
+        {images[0] && (
         <Image
           src={images[0]}
           alt={title}
@@ -23,6 +24,10 @@ export default function LinenSarees({ images = [], title }) {
           className="object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         />
       )}
+      </div>
+      <div className="absolute z-[9999] bg-white h-[176px] border-[0.5px] border-[#dfdfdf] bottom-5 left-5 right-5 pb-5 px-5 rounded-[36px]">
+
+      </div>
     </div>
   );
 }
