@@ -48,7 +48,7 @@ export default function ProductType() {
         {products.map((product) => (
           <motion.div
             key={product.id}
-            className="relative group bg-white overflow-hidden cursor-pointer border border-gray-200 rounded-[20px] h-[440px]"
+            className="hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] relative group bg-white overflow-hidden cursor-pointer border border-gray-200 rounded-[20px] h-[440px]"
             initial="initial"
             whileHover="hover"
           >
