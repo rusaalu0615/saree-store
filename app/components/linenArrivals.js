@@ -7,21 +7,37 @@ export default function LinenArrivals() {
       price: 120,
       images: ["/linentype.PNG", "/linentype1.PNG"],
       title: "Elegant Linen Saree",
+      originalPrice: 150,
+      discountedPercentage: 20,
+      type: ["Linen"],
+      rating: 4.5
     },
      {
       price: 120,
       images: ["/linentype.PNG", "/linentype1.PNG"],
       title: "Elegant Linen Saree",
+       originalPrice: 150,
+      discountedPercentage: 20,
+      type: ["Linen"],
+      rating: 4.5
     },
      {
       price: 120,
       images: ["/linentype.PNG", "/linentype1.PNG"],
       title: "Elegant Linen Saree",
+       originalPrice: 150,
+      discountedPercentage: 20,
+      type: ["Linen"],
+      rating: 4.5
     },
      {
       price: 120,
       images: ["/linentype.PNG", "/linentype1.PNG"],
       title: "Elegant Linen Saree",
+       originalPrice: 150,
+      discountedPercentage: 20,
+      type: ["Linen"],
+      rating: 4.5
     },
   ];
 
@@ -44,6 +60,10 @@ export default function LinenArrivals() {
             price={item.price}
             images={item.images}
             title={item.title}
+            originalPrice={item.originalPrice}
+            discountedPercentage={item.discountedPercentage}
+            type={item.type}
+            rating={item.rating}
           />
         ))}
       </div>
