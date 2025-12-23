@@ -27,7 +27,10 @@ export default function LinenSarees({ images = [], title, price, originalPrice, 
                     />
                 )}
             </div>
-            <div className="hover:shadow-[0_-20px_24px_rgba(0,0,0,0.1)] absolute z-[9999] bg-white h-[176px] border-[0.5px] border-[#dfdfdf] bottom-[10px] left-[10px] right-[10px] pb-[10px] px-[10px] rounded-[36px]">
+            <div className="absolute w-[78px] h-[18px] ">
+
+            </div>
+            <div className="hover:shadow-[0_-20px_24px_rgba(0,0,0,0.1)] absolute bg-white h-[176px] border-[0.5px] border-[#dfdfdf] bottom-[10px] left-[10px] right-[10px] pb-[10px] px-[10px] rounded-[36px]">
                 <div className="absolute" style={{ top: 20, left: 20, right: 20, bottom: 10 }}>
                     <div className="flex justify-between px-[10px] mt-[10px]">
                     <p className="text-[12px] text-color-[#9c9c9c]">{type}</p>
