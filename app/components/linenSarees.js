@@ -69,7 +69,10 @@ export default function LinenSarees() {
                             transition={{ duration: 0.3 }}
                             style={{paddingLeft:8, paddingRight:8, paddingTop:8,paddingBottom:8}}
                         >
-                            <span>Shop Now</span>
+                            <a href="/linen-saree">
+  <span>Shop Now</span>
+</a>
+
                             <ArrowRight size={20} />
                         </motion.span>
                     </motion.div>

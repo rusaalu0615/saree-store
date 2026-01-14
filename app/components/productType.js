@@ -1,18 +1,21 @@
 "use client";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-import { hover, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ProductType() {
   const products = [
-    { id: 1, title: "Silk Saree", description: "Premium silk Collection", imageUrl: "/image1.jpg" },
-    { id: 2, title: "Cotton Saree", description: "Cotton Collection", imageUrl: "/image2.jpg" },
-    { id: 3, title: "Linen Saree", description: "Linen Collection", imageUrl: "/image3.jpg" },
-    { id: 4, title: "Banarasi Saree", description: "Banarasi Collection", imageUrl: "/image4.jpg" },
-    { id: 5, title: "Printed Saree", description: "Printed Collection", imageUrl: "/image5.png" },
-    { id: 6, title: "Chiffon Saree", description: "Chiffon Collection", imageUrl: "/image6.jpg" },
-    { id: 7, title: "Tissue Saree", description: "Tissue Collection", imageUrl: "/image7.jpg" },
-    { id: 8, title: "Georgette Saree", description: "Georgette Collection", imageUrl: "/image8.jpg" },
+    { id: 1, title: "Silk Saree", description: "Premium silk Collection", imageUrl: "/image1.jpg", link: "/silk-saree" },
+    { id: 2, title: "Cotton Saree", description: "Cotton Collection", imageUrl: "/image2.jpg", link: "/cotton-saree" },
+    { id: 3, title: "Linen Saree", description: "Linen Collection", imageUrl: "/image3.jpg", link: "/linen-saree" },
+    { id: 4, title: "Banarasi Saree", description: "Banarasi Collection", imageUrl: "/image4.jpg", link: "/banarasi-saree" },
+    { id: 5, title: "Printed Saree", description: "Printed Collection", imageUrl: "/image5.png", link: "/printed-saree" },
+    { id: 6, title: "Chiffon Saree", description: "Chiffon Collection", imageUrl: "/image6.jpg", link: "/chiffon-saree" },
+    { id: 7, title: "Tissue Saree", description: "Tissue Collection", imageUrl: "/image7.jpg", link: "/tissue-saree" },
+    { id: 8, title: "Georgette Saree", description: "Georgette Collection", imageUrl: "/image8.jpg", link: "/georgette-saree" },
+    { id: 9, title: "Bhagalpuri Saree", description: "Traditional Bhagalpuri Collection", imageUrl: "/image1.jpg", link: "/bhagalpuri-saree" },
+    { id: 10, title: "Unstitched Suit Set", description: "Premium Suit Set Collection", imageUrl: "/image5.png", link: "/unstitched-suit-set" },
   ];
 
   const imageVariants = {
@@ -44,14 +47,14 @@ export default function ProductType() {
       </h2>
 
       {/* ✅ Grid Container */}
-      <div className=" grid grid-cols-4 gap-[20px]" style={{marginTop:30, marginLeft:40, marginRight:40}}>
+      <div className=" grid grid-cols-5 gap-[20px]" style={{marginTop:30, marginLeft:40, marginRight:40}}>
         {products.map((product) => (
-          <motion.div
-            key={product.id}
-            className="hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] relative group bg-white overflow-hidden cursor-pointer border border-gray-200 rounded-[20px] h-[440px]"
-            initial="initial"
-            whileHover="hover"
-          >
+          <Link key={product.id} href={product.link}>
+            <motion.div
+              className="hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] relative group bg-white overflow-hidden cursor-pointer border border-gray-200 rounded-[20px] h-[440px]"
+              initial="initial"
+              whileHover="hover"
+            >
             <motion.img
               src={product.imageUrl}
               alt={product.title}
@@ -78,6 +81,7 @@ export default function ProductType() {
                 <ArrowUpRight className="inline-block" style={{width: '18px', height: '18px'}}/>
             </span>
           </motion.div>
+          </Link>
         ))}
       </div>
     </div>

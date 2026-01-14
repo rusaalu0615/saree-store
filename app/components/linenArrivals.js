@@ -4,37 +4,37 @@ import LinenSarees from "./sareeCard";
 export default function LinenArrivals() {
   const linenArrivalsData = [
     {
-      price: 120,
+      price: 1200,
       images: ["/linentype.PNG", "/linentype1.PNG"],
       title: "Elegant Linen Saree",
-      originalPrice: 150,
+      originalPrice: 1500,
       discountedPercentage: 20,
       type: ["Linen"],
       rating: 4.5
     },
      {
-      price: 120,
+      price: 1200,
       images: ["/linentype.PNG", "/linentype1.PNG"],
       title: "Elegant Linen Saree",
-       originalPrice: 150,
+       originalPrice: 1500,
       discountedPercentage: 20,
       type: ["Linen"],
       rating: 4.5
     },
      {
-      price: 120,
+      price: 1200,
       images: ["/linentype.PNG", "/linentype1.PNG"],
       title: "Elegant Linen Saree",
-       originalPrice: 150,
+       originalPrice: 1500,
       discountedPercentage: 20,
       type: ["Linen"],
       rating: 4.5
     },
      {
-      price: 120,
+      price: 1200,
       images: ["/linentype.PNG", "/linentype1.PNG"],
       title: "Elegant Linen Saree",
-       originalPrice: 150,
+       originalPrice: 1500,
       discountedPercentage: 20,
       type: ["Linen"],
       rating: 4.5

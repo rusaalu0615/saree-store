@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const DATA = {
   linen: {
@@ -10,6 +11,7 @@ const DATA = {
     description:
       "Discover the timeless elegance of our exquisite linen saree collection. Crafted with premium quality linen fabric, each saree is a perfect blend of comfort and style.",
     shopNow: "Shop Now",
+    link: "/linen-saree",
   },
   cotton: {
     image: "/cotton.jpg",
@@ -17,6 +19,7 @@ const DATA = {
     description:
       "Explore breathable and graceful cotton sarees designed for everyday elegance. Soft textures and classic designs for effortless comfort.",
     shopNow: "Shop Now",
+    link: "/cotton-saree",
   },
 };
 
@@ -120,16 +123,18 @@ export default function LinenInfo() {
             </motion.p>
 
             {/* SHOP NOW */}
-            <motion.div
-              className="inline-flex items-center gap-2 text-lg text-white font-medium cursor-pointer w-fit"
-              initial={{ y: -30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1 }}
-              whileHover={{ x: 6 }}
-            >
-              <span>{DATA[active].shopNow}</span>
-              <ArrowRight size={18} />
-            </motion.div>
+            <Link href={DATA[active].link}>
+              <motion.div
+                className="inline-flex items-center gap-2 text-lg text-white font-medium cursor-pointer w-fit"
+                initial={{ y: -30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1 }}
+                whileHover={{ x: 6 }}
+              >
+                <span>{DATA[active].shopNow}</span>
+                <ArrowRight size={18} />
+              </motion.div>
+            </Link>
           </motion.div>
         </div>
       )}

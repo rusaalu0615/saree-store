@@ -48,8 +48,8 @@ export default function LinenSarees({ images = [], title, price, originalPrice, 
                     <div className="flex justify-between" style={{ marginTop: 20 }}>
                         <div className="flex flex-col gap-[0px]">
                             <p className="text-[12px] text-[6e6e6e]">Price</p>
-                            <span className="text-[12px] text-[#9e9e9e] line-through ml-2">${originalPrice}</span>
-                            <span className="text-[16px] text-[#30c000] font-semibold">${price} </span>
+                            <span className="text-[12px] text-[#9e9e9e] line-through ml-2">₹{originalPrice}</span>
+                            <span className="text-[16px] text-[#30c000] font-semibold">₹{price} </span>
 
                         </div>
                         <div className="flex gap-[10px]" style={{marginTop:25}}>

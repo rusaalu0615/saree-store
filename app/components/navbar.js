@@ -1,5 +1,7 @@
 "use client";
+
 import React from "react";
+import Link from "next/link";
 import { ChevronUp, ArrowUpRight, User } from "lucide-react";
 
 export default function Navbar() {
@@ -30,20 +32,43 @@ export default function Navbar() {
           border-[0.5px] border-[#dfdfdf]
           flex items-center
         "
-        style={{paddingLeft:20, paddingRight:20}}
+        style={{ paddingLeft: 20, paddingRight: 20 }}
       >
         <ul className="flex items-center gap-8 text-black text-[16px] whitespace-nowrap">
-          <li className="flex items-center gap-1 cursor-pointer">
-            Linen Sarees <ChevronUp size={18} />
+          <li>
+            <Link
+              href="/linen-saree"
+              className="flex items-center gap-1 cursor-pointer"
+            >
+              Linen Sarees <ChevronUp size={18} />
+            </Link>
           </li>
-          <li className="flex items-center gap-1 cursor-pointer">
-            Bhagalpuri Sarees <ChevronUp size={18} />
+
+          <li>
+            <Link
+              href="/bhagalpuri-saree"
+              className="flex items-center gap-1 cursor-pointer"
+            >
+              Bhagalpuri Sarees <ChevronUp size={18} />
+            </Link>
           </li>
-          <li className="flex items-center gap-1 cursor-pointer">
-            Silk Sarees <ChevronUp size={18} />
+
+          <li>
+            <Link
+              href="/silk-saree"
+              className="flex items-center gap-1 cursor-pointer"
+            >
+              Silk Sarees <ChevronUp size={18} />
+            </Link>
           </li>
-          <li className="flex items-center gap-1 cursor-pointer">
-            Unstitched Suit Set <ArrowUpRight size={18} />
+
+          <li>
+            <Link
+              href="/unstitched-suit-set"
+              className="flex items-center gap-1 cursor-pointer"
+            >
+              Unstitched Suit Set <ArrowUpRight size={18} />
+            </Link>
           </li>
         </ul>
       </nav>
