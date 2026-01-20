@@ -2,9 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
-import { ChevronUp, ArrowUpRight, User } from "lucide-react";
+import { ChevronUp, ArrowUpRight, User, ShoppingBag } from "lucide-react";
+import { useCart } from "../context/CartContext";
 
 export default function Navbar() {
+  const { getCartItemsCount } = useCart();
+  const cartItemsCount = getCartItemsCount();
+
   return (
     <div
       className="
@@ -16,11 +20,13 @@ export default function Navbar() {
     >
       {/* 🔹 LOGO */}
       <div className="flex items-center">
-        <img
-          src="/logo.png"
-          alt="Logo"
-          className="h-[40px] w-auto object-contain cursor-pointer"
-        />
+        <Link href="/">
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="h-[40px] w-auto object-contain cursor-pointer"
+          />
+        </Link>
       </div>
 
       {/* 🔹 NAVBAR PILL */}
@@ -38,7 +44,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/linen-saree"
-              className="flex items-center gap-1 cursor-pointer"
+              className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors"
             >
               Linen Sarees <ChevronUp size={18} />
             </Link>
@@ -47,7 +53,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/bhagalpuri-saree"
-              className="flex items-center gap-1 cursor-pointer"
+              className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors"
             >
               Bhagalpuri Sarees <ChevronUp size={18} />
             </Link>
@@ -56,7 +62,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/silk-saree"
-              className="flex items-center gap-1 cursor-pointer"
+              className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors"
             >
               Silk Sarees <ChevronUp size={18} />
             </Link>
@@ -65,7 +71,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/unstitched-suit-set"
-              className="flex items-center gap-1 cursor-pointer"
+              className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors"
             >
               Unstitched Suit Set <ArrowUpRight size={18} />
             </Link>
@@ -73,18 +79,47 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      {/* 🔹 USER */}
-      <div
-        className="
-          h-[60px] w-[60px]
-          bg-white
-          border border-[#dfdfdf]
-          rounded-full
-          flex items-center justify-center
-          cursor-pointer
-        "
-      >
-        <User size={22} />
+      {/* 🔹 USER & CART */}
+      <div className="flex items-center gap-3">
+        {/* Cart Icon */}
+        <Link href="/cart">
+          <div
+            className="
+              h-[60px] w-[60px]
+              bg-white
+              border border-[#dfdfdf]
+              rounded-full
+              flex items-center justify-center
+              cursor-pointer
+              hover:bg-gray-50
+              transition-colors
+              relative
+            "
+          >
+            <ShoppingBag size={22} />
+            {cartItemsCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center">
+                {cartItemsCount}
+              </span>
+            )}
+          </div>
+        </Link>
+
+        {/* User Icon */}
+        <div
+          className="
+            h-[60px] w-[60px]
+            bg-white
+            border border-[#dfdfdf]
+            rounded-full
+            flex items-center justify-center
+            cursor-pointer
+            hover:bg-gray-50
+            transition-colors
+          "
+        >
+          <User size={22} />
+        </div>
       </div>
     </div>
   );
